@@ -6,7 +6,6 @@ public class SoftwareEngineer {
     private String techStack;
 
     public SoftwareEngineer() {
-
     }
 
     public SoftwareEngineer(Integer id, String name, String techStack) {
