@@ -11,10 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/software-engineers")
 public class SoftwareEngineerController {
 
+    private final SoftwareEngineerService softwareEngineerService;
+
+    SoftwareEngineerController(SoftwareEngineerService softwareEngineerService) {
+        this.softwareEngineerService = softwareEngineerService;
+    }
+
     @GetMapping
     public List<SoftwareEngineer> getEngineers() {
-        return List.of(new SoftwareEngineer(1, "Zane Peck", "js, node.js, express.js, vue.js"), 
-                       new SoftwareEngineer(2, "Emily Tin", "Java, Spring Boot, SQL, Python"));
+        return softwareEngineerService.getAllSoftwareEngineers();
     }
 
 }
