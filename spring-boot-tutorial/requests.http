@@ -1,0 +1,17 @@
+### GET request to example server
+GET http://localhost:8080
+
+### GET request for software engineer objects
+GET http://localhost:8080/api/software-engineers
+
+### GET request for software engineer objects
+GET http://localhost:8080/api/software-engineers/1
+
+### POST request
+POST http://localhost:8080/api/software-engineers 
+Content-Type: application/json
+
+{
+    "name": Ryan,
+    "tech_stack": "java, spring, spring boot"
+}
